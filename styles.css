@@ -1,33 +1,334 @@
-body{      
-background-color:red;
-color:#a458f5;
-padding-top:0px;
-padding-left: 200px;
-padding-right: 200px;
-margin: 0px;
-text-align: center;
+/* -------- Fun, Colorful Variables -------- */
+:root {
+  --pink: #ff69b4;
+  --lavender: #c084fc;
+  --aqua: #00e0d1;
+  --lemon: #fff176;
+  --white: #fff;
+  --dark: #222;
+  --shadow: 0 6px 20px rgba(0,0,0,0.15);
+  --radius: 16px;
+  --transition: 0.4s ease;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+body {
+  background: linear-gradient(to bottom right, #ffeef5, #e0f7fa);
+  color: var(--dark);
+  line-height: 1.6;
 }
 
-header{
-    background-color:#db23b6;
-    padding: 40px;
-    border: pink  20px solid;
-    margin-bottom: 40px;
+/* -------- Navbar -------- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background: linear-gradient(to right, var(--pink), var(--lavender));
+  box-shadow: var(--shadow);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+.logo {
+  font-weight: 700;
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: var(--white);
+}
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+}
+.nav-links a {
+  color: var(--white);
+  text-decoration: none;
+  position: relative;
+}
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0;
+  height: 2px;
+  background: var(--lemon);
+  transition: width var(--transition);
+}
+.nav-links a:hover::after {
+  width: 100%;
+}
+.burger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: 0;
+  cursor: pointer;
+}
+.burger span {
+  width: 24px;
+  height: 3px;
+  background: var(--white);
+  transition: transform .4s;
+}
+@media(max-width: 760px) {
+  .nav-links {
+    position: fixed;
+    inset: 0 0 0 30%;
+    flex-direction: column;
+    padding: 5rem 2rem;
+    background: var(--pink);
+    transform: translateX(100%);
+    transition: transform var(--transition);
+  }
+  .nav-links.open {
+    transform: translateX(0);
+  }
+  .burger {
+    display: flex;
+  }
 }
 
-nav{
-    background-color:#e86696;
-    padding:40px 20px 40px 20px;
+/* -------- Hero Section with Animation -------- */
+.hero {
+  height: 85vh;
+  background: url('https://source.unsplash.com/featured/?girls-travel') center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: var(--white);
+  padding: 0 1rem;
+  position: relative;
+}
+.hero h1 {
+  font-size: 3rem;
+  animation: bounce 2s infinite;
+  text-shadow: var(--shadow);
+}
+.hero p {
+  margin-top: .5rem;
+  font-size: 1.3rem;
+}
+.btn {
+  margin-top: 1.2rem;
+  display: inline-block;
+  padding: .8rem 1.6rem;
+  background: var(--lemon);
+  color: var(--dark);
+  border-radius: var(--radius);
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: var(--shadow);
+  transition: background var(--transition);
+}
+.btn:hover {
+  background: var(--aqua);
+  color: var(--white);
 }
 
-main{
-    background-color:#1adbce; 
-padding:40px 20px 40px 20px ;
-text-align: left;
+/* Bouncy animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
 }
 
-footer{
-    background-color: #eed5f7;
-    padding:40px 20px 40px 20px ;
-    text-align: left;
+/* -------- Destinations Section -------- */
+.destinations {
+  padding: 4rem 2rem;
+  background: linear-gradient(to bottom right, #ffe3ff, #d1faff);
+}
+.destinations h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2.2rem;
+  color: var(--pink);
+}
+.grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.card {
+  position: relative;
+  border-radius: var(--radius);
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: transform var(--transition);
+}
+.card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+.card:hover img {
+  transform: scale(1.1);
+}
+.caption {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 0.8rem;
+  background: rgba(0, 0, 0, 0.6);
+  color: var(--white);
+  text-align: center;
+  font-weight: 600;
+}
+
+/* -------- Tips -------- */
+.tips {
+  padding: 3rem 2rem;
+  background: linear-gradient(to right, #faf3dd, #ffe9ec);
+  text-align: center;
+}
+.tips h2 {
+  color: var(--aqua);
+  margin-bottom: 1rem;
+}
+.tips ul {
+  list-style: none;
+  max-width: 600px;
+  margin: 0 auto;
+}
+.tips li {
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* -------- Contact -------- */
+.contact {
+  padding: 3rem 2rem;
+  background: linear-gradient(to right, #e0f7fa, #fff3e0);
+  text-align: center;
+}
+.contact h2 {
+  color: var(--lavender);
+  margin-bottom: 1rem;
+}
+.contact a {
+  color: var(--pink);
+  text-decoration: none;
+  font-weight: 600;
+}
+.contact a:hover {
+  text-decoration: underline;
+}
+
+/* -------- Footer -------- */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: var(--lavender);
+  color: var(--white);
+  font-weight: 500;
+}
+
+/* -------- Fade-in on Scroll -------- */
+.fade {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.fade.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional burger close animation */
+.burger.close span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+.burger.close span:nth-child(2) {
+  opacity: 0;
+}
+.burger.close span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+body {
+  background: linear-gradient(to bottom right, #fdf6f0, #ffe4ec);
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #ffccd5;
+  padding: 20px;
+  text-align: center;
+  color: #333;
+}
+
+nav a {
+  color: #fff;
+  background-color: #ff6392;
+  padding: 10px 15px;
+  text-decoration: none;
+  margin: 0 10px;
+  border-radius: 8px;
+  font-weight: bold;
+}
+
+nav a:hover {
+  background-color: #ff4b80;
+}
+
+h2 {
+  color: #ff4b80;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.dest-card {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+  margin: 30px auto;
+  padding: 20px;
+  max-width: 800px;
+  text-align: center;
+}
+
+.dest-card img {
+  width: 100%;
+  border-radius: 20px;
+  margin-top: 15px;
+}
+
+.tips-section {
+  max-width: 850px;
+  margin: 0 auto;
+  background: #fff8f8;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.08);
+}
+
+.tips-section h3 {
+  color: #ff6392;
+  margin-top: 20px;
+}
+
+.tips-section ul {
+  list-style-type: 💡;
+  padding-left: 20px;
+}
+
+.tips-section li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #ffe4ec;
+  color: #444;
 }
