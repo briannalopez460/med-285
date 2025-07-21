@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Song Recs - El Metro Salsero</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap" rel="stylesheet">
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <h1>Song Recommendations</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="songs.html">Song Recs</a>
+      <a href="worldwide.html">Listeners</a>
+    </nav>
+  </header>
+
+  <section class="main-content">
+    <ul>
+      <li><strong>Marc Anthony</strong> – "Vivir Mi Vida" <a href="https://youtu.be/YQpSvB4FwEw" target="_blank">Listen</a></li>
+      <li><strong>Celia Cruz</strong> – "La Vida Es Un Carnaval" <a href="https://youtu.be/0nBFWzpWXuM" target="_blank">Listen</a></li>
+      <li><strong>Victor Manuelle</strong> – "Me Llamaré Tuyo" <a href="https://youtu.be/ZLUxxdkk60g" target="_blank">Listen</a></li>
+    </ul>
+
+    <!-- VosCast.com HTML5 Player -->
+    <script type="text/javascript" src="//cdn.voscast.com/player/?key=21a0f39b3404a6aede12e9cb5498e6ad"></script>
+    <!-- End Player -->
+
+    <form id="songForm">
+      <h3>Suggest a song:</h3>
+      <input type="text" id="songName" placeholder="Your song recommendation" required />
+      <button type="submit">Submit</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>Created by Brianna Lopez – Web Production Class</p>
+  </footer>
+</body>
+</html>

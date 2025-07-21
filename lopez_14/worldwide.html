@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Worldwide Listeners - El Metro Salsero</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <h1>Listeners Around the World</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="songs.html">Song Recs</a>
+      <a href="worldwide.html">Listeners</a>
+    </nav>
+  </header>
+
+  <section class="main-content">
+    <h2 class="floating">Now Playing on El Metro Salsero 🎶</h2>
+    <p>
+      El Metro Salsero has reached salsa lovers in places like Puerto Rico, the Dominican Republic, Colombia, Spain, New York City, Miami, and more!
+      Our mission is to bring the rhythm of Latin music to every corner of the world.
+    </p>
+
+    <!-- VosCast Live Stats Display -->
+    <div style="margin-top: 30px; font-weight: bold; font-size: 1.1em;">
+      <p>🎵 <strong>Current Song Playing on El Metro Salsero:</strong></p>
+      <div id="687bf1973e1ee">Loading current listeners and song info...</div>
+      <script>
+        var script_687bf1973e1ee;
+        function getStats_687bf1973e1ee(link) {
+            if (script_687bf1973e1ee) {
+              document.getElementsByTagName('head')[0].removeChild(script_687bf1973e1ee);
+            }
+            script_687bf1973e1ee = document.createElement('script');
+            script_687bf1973e1ee.src = 'http://cdn.voscast.com/stats/display.js?key=21a0f39b3404a6aede12e9cb5498e6ad&stats=currentlisteners,songtitle&bid=687bf1973e1ee&action=update';
+            document.getElementsByTagName('head')[0].appendChild(script_687bf1973e1ee);
+        }
+        function updateStats_687bf1973e1ee(result) {
+            document.getElementById('687bf1973e1ee').innerHTML = result['currentlisteners,songtitle'];
+        }
+        if (!document.getElementById('687bf1973e1ee')){
+            document.write('<div id="687bf1973e1ee">166,Ya No Es Lo Mismo - Hector Rey</div>');
+        }
+        setInterval('getStats_687bf1973e1ee()', 60000);
+        getStats_687bf1973e1ee(); // initial load
+      </script>
+    </div>
+
+    <!-- Optional Playlist Display -->
+    <script type="text/javascript" src="//cdn.voscast.com/resources/?key=21a0f39b3404a6aede12e9cb5498e6ad&c=playlist"></script>
+  </section>
+
+  <footer>
+    <p>Created by Brianna Lopez – Web Production Class</p>
+  </footer>
+</body>
+</html>
+
+
+
+
