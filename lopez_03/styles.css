@@ -1,0 +1,33 @@
+body{      
+background-color:red;
+color:#a458f5;
+padding-top:0px;
+padding-left: 200px;
+padding-right: 200px;
+margin: 0px;
+text-align: center;
+}
+
+header{
+    background-color:#db23b6;
+    padding: 40px;
+    border: pink  20px solid;
+    margin-bottom: 40px;
+}
+
+nav{
+    background-color:#e86696;
+    padding:40px 20px 40px 20px;
+}
+
+main{
+    background-color:#1adbce; 
+padding:40px 20px 40px 20px ;
+text-align: left;
+}
+
+footer{
+    background-color: #eed5f7;
+    padding:40px 20px 40px 20px ;
+    text-align: left;
+}
