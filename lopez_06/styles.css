@@ -1,0 +1,61 @@
+/* START border-box fix */
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+/* END border-box fix */
+
+body {
+    background-color: rgb(0, 170, 255);
+    color: pink;
+
+}
+
+#wrapper { background-color: pink;
+    width: 80%;
+    margin: 0px auto
+}
+header, nav, main, footer{
+    padding: 40px;
+}
+header {
+
+    background-color: rgb(244, 117, 229);
+}
+
+nav {
+    background-color: pink;
+}
+
+main {
+    background-color: #890bd2;
+   float: left;
+   width: 70%;
+}
+article {
+    background-color: #7cbba0;
+}
+
+section {
+background-color: fuchsia;
+   width: 100px;
+   height: 100px;
+    margin: 10px;
+    float: left;
+    padding: 10px;
+}
+
+aside { 
+    background-color: #e29211;
+    float: left;
+    width: 30%;
+}
+footer {
+    background-color: #7cbba0;
+    float:none; 
+    clear: both;
+}
