@@ -1,0 +1,90 @@
+  /* 2 SET duration */
+/* The animation code */
+@keyframes animateBgColorTwo {
+    0%   {background-color: red;}
+    25%  {background-color: yellow;}
+    50%  {background-color: blue;}
+    100% {background-color: green;}
+  }
+/* The element to apply the animation to */
+div.squares {
+    width: 100px;
+    height: 100px;
+    background-color: pink;
+    animation-name: animateBgColorTwo;
+    animation-duration: 4s;
+}
+ /* 3 change both the background-color and the position  */
+  /* The animation code */
+@keyframes animateBgColorThree {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+  /* The element to apply the animation to */
+  div.rectangleThree {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: animateBgColorThree;
+    animation-duration: 4s;
+  }
+  /* 4 DELAY */
+  @keyframes animateBgColorFour {
+    0%   {background-colorleft:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:rgb(202, 37, 213); left:0px; top:0px;}
+  }
+  div.square {
+    width: 100px;
+    height: 100px;
+    position: relative;
+    background-color: red;
+    animation-name: animateBgColorFour;
+    animation-duration: 4s;
+    animation-delay: 2s;
+  } 
+    /* 5 ITERATION */
+  @keyframes animateBgColorFive {
+    0%   {background-color:red; left:0px; top:0px;}
+    25%  {background-color:yellow; left:200px; top:0px;}
+    50%  {background-color:blue; left:200px; top:200px;}
+    75%  {background-color:green; left:0px; top:200px;}
+    100% {background-color:red; left:0px; top:0px;}
+  }
+  div.rectangleFive {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      background-color: red;
+      animation-name: animateBgColorFive;
+      animation-duration: 4s;
+      animation-iteration-count: 3; 
+      /* infinite or an integer*/
+  }   
+   /* 7 speed Curve */
+  @keyframes speedCurve {
+    from {left: 0px;}
+    to {left: 300px;}
+  }
+  div {
+      width: 100px;
+      height: 50px;
+      margin: 4px 0px;
+      background-color: red;
+      font-weight: bold;
+      position: relative;
+      animation: speedCurve 5s;
+      animation-fill-mode: forwards;
+          animation-iteration-count: infinite;
+  }
+  #linear {animation-timing-function: linear;}
+  #ease {animation-timing-function: ease;}
+  #easein {animation-timing-function: ease-in;}
+  #easeout {animation-timing-function: ease-out;}
+  #easeinout {animation-timing-function: ease-in-out;}

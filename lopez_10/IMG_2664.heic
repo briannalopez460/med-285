@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS ANIMATION</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>CSS ANIMATION</h1>
+    <!-- <h2>animate background color with 2 colors</h2>
+    <div class="rectangleOne"></div>
+       <h2>animate background color with 4 colors</h2>
+        <div class="rectangleTwo"></div> -->
+       <!-- <h2>Delay an Animation</h2>
+    <div class="rectangleFour"></div> -->
+        <h2>Who am i ? </h2>
+    <div id="hoobies">linear</div>
+    <div id="where am I from ?">ease</div>
+    <div id="my major?">easein</div>
+    <div id="what school did i go to ?">easeout</div>
+    <div id="places I like to travel">easeinout</div> 
