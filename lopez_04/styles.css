@@ -1,0 +1,85 @@
+/* Body */
+body {
+  background-color: #f8f3fc;
+  font-family: 'Open Sans', sans-serif;
+  color: #2e003e;
+  line-height: 1.6;
+}
+
+/* Typography */
+h1 {
+  color: #6a0dad;
+  text-align: center;
+}
+
+h2, h3 {
+  color: #9400d3;
+}
+
+p {
+  font-size: 16px;
+}
+
+/* Layout */
+header, nav, footer {
+  background-color: #e6ccff;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+/* Nav Menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 15px;
+}
+
+/* Images */
+img {
+  width: 200px;
+  height: auto;
+  margin: 5px;
+}
+
+/* Footer Links */
+footer a {
+  color: #6a0dad;
+  font-weight: bold;
+}
+
+/* Hover Links */
+a:hover {
+  color: #ff69b4;
+  text-decoration: underline;
+}
+
+/* TABLE Styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 15px;
+}
+
+th, td {
+  border: 1px solid #6a0dad;
+  padding: 10px;
+  text-align: left;
+}
+
+/* Descendant selector example */
+td p {
+  color: #4b0082;
+}
+
+td {
+  background-color: #f3e6ff;
+}
+
+/* Hover effect */
+table tr:hover {
+  background-color: #f0d9ff;
+}
